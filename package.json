@@ -1,11 +1,12 @@
 {
-  "name": "nuxt-auth-utils",
-  "version": "0.5.29",
+  "name": "@navanjr/nuxt-auth-utils",
+  "version": "0.5.30",
   "description": "Add Authentication to Nuxt applications with secured & sealed cookies sessions.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/atinux/nuxt-auth-utils.git"
   },
+  "author": "navanjr",
   "license": "MIT",
   "type": "module",
   "packageManager": "pnpm@10.29.3",
@@ -13,14 +14,21 @@
     ".": {
       "types": "./dist/types.d.mts",
       "import": "./dist/module.mjs"
+    },
+    "./runtime/server/oauth": {
+      "types": "./dist/runtime/server/oauth.d.ts",
+      "import": "./dist/runtime/server/oauth.mjs"
+    },
+    "./runtime/server/lib/oauth/*": {
+      "types": "./dist/runtime/server/lib/oauth/*.d.ts",
+      "import": "./dist/runtime/server/lib/oauth/*.mjs"
     }
   },
   "main": "./dist/module.mjs",
   "typesVersions": {
     "*": {
-      ".": [
-        "./dist/types.d.mts"
-      ]
+      ".": ["./dist/types.d.mts"],
+      "runtime/server/oauth": ["./dist/runtime/server/oauth.d.ts"]
     }
   },
   "files": [
